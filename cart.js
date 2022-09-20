@@ -35,8 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((acc, curr) => acc + curr.price, 0)
+console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,8 +54,11 @@ const cart = [
 */
 
 //CODE HERE
-
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let finalPrice = cartTotal * (1 + tax) - couponValue;
+    return (`Your final price after tax and coupon is ${finalPrice}`)
+}
+console.log(calcFinalPrice(22.99, 9, .06))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,7 +82,11 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+My customer object will have 4 properties. Name, Allergies, Payment, and children.
+Name so that the server knows what to call the customer. Data type "String"
+Allergies to alert customers which dishes to avoid. Data type: "String"
+Payment type to make sure the restaurant accepts said payment type. Data type: "String"
+Children to ensure the restaurant knows to provide appropriate seating and menus. Data type: "string"
 */
 
 /*
@@ -88,3 +95,4 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {Name: "Bart", Allergies: "None", Payment: "Pocket Change", Children: "2"}

@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: "Pepperoni", 
+    price: 10.99,
+    category: "Entree",
+    popularity: 8,
+    rating: 10,
+    tags: ["Thin Crust", "gluten-free"]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+const { price } = pizza;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+const { category } = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,6 +97,13 @@
 */
 
 //CODE HERE
+const foodArr = [
+    {name: "Ham", price: 9.99, category: "Entree", popularity: 6, rating: 7, tags: ["Thin Crust", "gluten-free", "sale"]},
+    {name: "Jalapeno", price: 8.99, category: "Entree", popularity: 4, rating: 5, tags: ["Thick Crust", "spicy"]},
+    {name: "Ham and Pineapple", price: 11.99, category: "Entree", popularity: 8, rating: 9, tags: ["Thin Crust", "chefs favorite", "sale"]},
+    {name: "Cheese", price: 7.99, category: "Entree", popularity: 8, rating: 10, tags: ["Thin Crust", "gluten-free", "budget"]},
+    {name: "Dairy free cheese", price: 9.99, category: "Entree", popularity: 4, rating: 9, tags: ["Thin Crust", "gluten-free", "new"]},
+]
 
 
 
@@ -105,9 +121,9 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+    let filteredFood = foodArr.filter(element => element.tags.includes("Thin Crust"))
 
-
+console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,7 +165,14 @@
 */
 
 //CODE HERE
-
+const filterByProperty = (property, number, type) => {
+    let filteredArray = []; 
+    const fArray = foodArray.filter(function(element){
+        if(type === "above"){
+            push.foodArray.property
+        }
+    })
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +182,4 @@
 */
 
 //CODE HERE
+console.log(filterByProperty("price", 6.99, "above"))
